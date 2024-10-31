@@ -76,18 +76,16 @@ DB_CONFIG = {
 ## 🚀 Deployment
 
 ```mermaid
-Deployment Architecture.download-icon {
-            cursor: pointer;
-            transform-origin: center;
-        }
-        .download-icon .arrow-part {
-            transition: transform 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95);
-             transform-origin: center;
-        }
-        button:has(.download-icon):hover .download-icon .arrow-part, button:has(.download-icon):focus-visible .download-icon .arrow-part {
-          transform: translateY(-1.5px);
-        }
-        #mermaid-diagram-r1le{font-family:var(--font-geist-sans);font-size:12px;fill:#000000;}#mermaid-diagram-r1le .error-icon{fill:#552222;}#mermaid-diagram-r1le .error-text{fill:#552222;stroke:#552222;}#mermaid-diagram-r1le .edge-thickness-normal{stroke-width:1px;}#mermaid-diagram-r1le .edge-thickness-thick{stroke-width:3.5px;}#mermaid-diagram-r1le .edge-pattern-solid{stroke-dasharray:0;}#mermaid-diagram-r1le .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-diagram-r1le .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-diagram-r1le .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-diagram-r1le .marker{fill:#666;stroke:#666;}#mermaid-diagram-r1le .marker.cross{stroke:#666;}#mermaid-diagram-r1le svg{font-family:var(--font-geist-sans);font-size:12px;}#mermaid-diagram-r1le p{margin:0;}#mermaid-diagram-r1le .label{font-family:var(--font-geist-sans);color:#000000;}#mermaid-diagram-r1le .cluster-label text{fill:#333;}#mermaid-diagram-r1le .cluster-label span{color:#333;}#mermaid-diagram-r1le .cluster-label span p{background-color:transparent;}#mermaid-diagram-r1le .label text,#mermaid-diagram-r1le span{fill:#000000;color:#000000;}#mermaid-diagram-r1le .node rect,#mermaid-diagram-r1le .node circle,#mermaid-diagram-r1le .node ellipse,#mermaid-diagram-r1le .node polygon,#mermaid-diagram-r1le .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-diagram-r1le .rough-node .label text,#mermaid-diagram-r1le .node .label text{text-anchor:middle;}#mermaid-diagram-r1le .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-diagram-r1le .node .label{text-align:center;}#mermaid-diagram-r1le .node.clickable{cursor:pointer;}#mermaid-diagram-r1le .arrowheadPath{fill:#333333;}#mermaid-diagram-r1le .edgePath .path{stroke:#666;stroke-width:2.0px;}#mermaid-diagram-r1le .flowchart-link{stroke:#666;fill:none;}#mermaid-diagram-r1le .edgeLabel{background-color:white;text-align:center;}#mermaid-diagram-r1le .edgeLabel p{background-color:white;}#mermaid-diagram-r1le .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-diagram-r1le .labelBkg{background-color:rgba(255, 255, 255, 0.5);}#mermaid-diagram-r1le .cluster rect{fill:hsl(0, 0%, 98.9215686275%);stroke:#707070;stroke-width:1px;}#mermaid-diagram-r1le .cluster text{fill:#333;}#mermaid-diagram-r1le .cluster span{color:#333;}#mermaid-diagram-r1le div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:var(--font-geist-sans);font-size:12px;background:hsl(-160, 0%, 93.3333333333%);border:1px solid #707070;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-diagram-r1le .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#000000;}#mermaid-diagram-r1le .flowchart-link{stroke:rgb(var(--gray-400));stroke-width:1px;}#mermaid-diagram-r1le .marker,#mermaid-diagram-r1le marker,#mermaid-diagram-r1le marker *{fill:rgb(var(--gray-400))!important;stroke:rgb(var(--gray-400))!important;}#mermaid-diagram-r1le .label,#mermaid-diagram-r1le text,#mermaid-diagram-r1le text>tspan{fill:rgb(var(--black))!important;color:rgb(var(--black))!important;}#mermaid-diagram-r1le .background,#mermaid-diagram-r1le rect.relationshipLabelBox{fill:rgb(var(--white))!important;}#mermaid-diagram-r1le .entityBox,#mermaid-diagram-r1le .attributeBoxEven{fill:rgb(var(--gray-150))!important;}#mermaid-diagram-r1le .attributeBoxOdd{fill:rgb(var(--white))!important;}#mermaid-diagram-r1le .label-container,#mermaid-diagram-r1le rect.actor{fill:rgb(var(--white))!important;stroke:rgb(var(--gray-400))!important;}#mermaid-diagram-r1le line{stroke:rgb(var(--gray-400))!important;}#mermaid-diagram-r1le :root{--mermaid-font-family:var(--font-geist-sans);}HTTPSForwardWSGIQuery📱 TelegramNginx ProxyGunicornFlask AppMySQL DB
+graph LR
+    A["📱 Telegram"] -->|"HTTPS"| B["Nginx Proxy"]
+    B -->|"Forward"| C["Gunicorn"]
+    C -->|"WSGI"| D["Flask App"]
+    D -->|"Query"| E["MySQL DB"]
+    style A fill:#f9f,stroke:#333
+    style B fill:#bbf,stroke:#333
+    style C fill:#bfb,stroke:#333
+    style D fill:#fbf,stroke:#333
+    style E fill:#ff9,stroke:#333
 ```
 
 1. **Set Up WSGI Server**
@@ -240,18 +238,10 @@ For other issues, please open an Issue on GitHub.
 ## 📊 Performance Metrics
 
 ```mermaid
-Bot Performance.download-icon {
-            cursor: pointer;
-            transform-origin: center;
-        }
-        .download-icon .arrow-part {
-            transition: transform 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95);
-             transform-origin: center;
-        }
-        button:has(.download-icon):hover .download-icon .arrow-part, button:has(.download-icon):focus-visible .download-icon .arrow-part {
-          transform: translateY(-1.5px);
-        }
-        #mermaid-diagram-r201{font-family:var(--font-geist-sans);font-size:12px;fill:#000000;}#mermaid-diagram-r201 .error-icon{fill:#552222;}#mermaid-diagram-r201 .error-text{fill:#552222;stroke:#552222;}#mermaid-diagram-r201 .edge-thickness-normal{stroke-width:1px;}#mermaid-diagram-r201 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-diagram-r201 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-diagram-r201 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-diagram-r201 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-diagram-r201 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-diagram-r201 .marker{fill:#666;stroke:#666;}#mermaid-diagram-r201 .marker.cross{stroke:#666;}#mermaid-diagram-r201 svg{font-family:var(--font-geist-sans);font-size:12px;}#mermaid-diagram-r201 p{margin:0;}#mermaid-diagram-r201 .label{font-family:var(--font-geist-sans);color:#000000;}#mermaid-diagram-r201 .cluster-label text{fill:#333;}#mermaid-diagram-r201 .cluster-label span{color:#333;}#mermaid-diagram-r201 .cluster-label span p{background-color:transparent;}#mermaid-diagram-r201 .label text,#mermaid-diagram-r201 span{fill:#000000;color:#000000;}#mermaid-diagram-r201 .node rect,#mermaid-diagram-r201 .node circle,#mermaid-diagram-r201 .node ellipse,#mermaid-diagram-r201 .node polygon,#mermaid-diagram-r201 .node path{fill:#eee;stroke:#999;stroke-width:1px;}#mermaid-diagram-r201 .rough-node .label text,#mermaid-diagram-r201 .node .label text{text-anchor:middle;}#mermaid-diagram-r201 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-diagram-r201 .node .label{text-align:center;}#mermaid-diagram-r201 .node.clickable{cursor:pointer;}#mermaid-diagram-r201 .arrowheadPath{fill:#333333;}#mermaid-diagram-r201 .edgePath .path{stroke:#666;stroke-width:2.0px;}#mermaid-diagram-r201 .flowchart-link{stroke:#666;fill:none;}#mermaid-diagram-r201 .edgeLabel{background-color:white;text-align:center;}#mermaid-diagram-r201 .edgeLabel p{background-color:white;}#mermaid-diagram-r201 .edgeLabel rect{opacity:0.5;background-color:white;fill:white;}#mermaid-diagram-r201 .labelBkg{background-color:rgba(255, 255, 255, 0.5);}#mermaid-diagram-r201 .cluster rect{fill:hsl(0, 0%, 98.9215686275%);stroke:#707070;stroke-width:1px;}#mermaid-diagram-r201 .cluster text{fill:#333;}#mermaid-diagram-r201 .cluster span{color:#333;}#mermaid-diagram-r201 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:var(--font-geist-sans);font-size:12px;background:hsl(-160, 0%, 93.3333333333%);border:1px solid #707070;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-diagram-r201 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#000000;}#mermaid-diagram-r201 .flowchart-link{stroke:rgb(var(--gray-400));stroke-width:1px;}#mermaid-diagram-r201 .marker,#mermaid-diagram-r201 marker,#mermaid-diagram-r201 marker *{fill:rgb(var(--gray-400))!important;stroke:rgb(var(--gray-400))!important;}#mermaid-diagram-r201 .label,#mermaid-diagram-r201 text,#mermaid-diagram-r201 text>tspan{fill:rgb(var(--black))!important;color:rgb(var(--black))!important;}#mermaid-diagram-r201 .background,#mermaid-diagram-r201 rect.relationshipLabelBox{fill:rgb(var(--white))!important;}#mermaid-diagram-r201 .entityBox,#mermaid-diagram-r201 .attributeBoxEven{fill:rgb(var(--gray-150))!important;}#mermaid-diagram-r201 .attributeBoxOdd{fill:rgb(var(--white))!important;}#mermaid-diagram-r201 .label-container,#mermaid-diagram-r201 rect.actor{fill:rgb(var(--white))!important;stroke:rgb(var(--gray-400))!important;}#mermaid-diagram-r201 line{stroke:rgb(var(--gray-400))!important;}#mermaid-diagram-r201 :root{--mermaid-font-family:var(--font-geist-sans);}Average Response TimeUnder 2 secondsFile Upload Success Rate99.9%User Satisfaction4.8/5 starsDaily Active Users10,000+
+graph TD
+    A[Average Response Time] --> B[Under 0.2 second]
+    C[File Upload Success Rate] --> D[99.9%]
+    E[User Satisfaction] --> F[4.8/5 stars]
 ```
 
 ## 🔧 Advanced Configuration
