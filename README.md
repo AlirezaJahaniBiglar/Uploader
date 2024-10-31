@@ -48,8 +48,8 @@ graph TD
 1. **Clone the Repository**
 
 ```shellscript
-git clone https://github.com/YourUsername/IOTAnswerBot.git
-cd IOTAnswerBot
+git clone https://github.com/AlirezaJahaniBiglar/Uploader.git
+cd Uploader
 ```
 
 
