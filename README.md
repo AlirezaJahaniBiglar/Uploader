@@ -81,11 +81,18 @@ graph LR
     B -->|"Forward"| C["Gunicorn"]
     C -->|"WSGI"| D["Flask App"]
     D -->|"Query"| E["MySQL DB"]
+
     style A fill:#f9f,stroke:#333
     style B fill:#bbf,stroke:#333
     style C fill:#bfb,stroke:#333
     style D fill:#fbf,stroke:#333
     style E fill:#ff9,stroke:#333
+
+    %% Define a class for white text color
+    classDef whiteText fill:#000,stroke:#333,color:#fff
+
+    %% Apply white text class to nodes
+    class A,B,C,D,E whiteText
 ```
 
 1. **Set Up WSGI Server**
