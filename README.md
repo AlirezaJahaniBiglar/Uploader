@@ -284,3 +284,9 @@ You can customize the bot's appearance and behavior:
 1. **Custom Welcome Messages**: Edit welcome messages in `config.py`.
 2. **Branded Visuals**: Add your logo and brand colors to bot responses.
 3. **Custom Keyboard Layouts**: Design custom keyboard layouts for specific commands.
+
+## 💸 Support This Project
+
+If you found this project helpful and would like to support its development, you can make a contribution via TON at the following address:
+
+**TON Address**: `alirezajahani.ton`
